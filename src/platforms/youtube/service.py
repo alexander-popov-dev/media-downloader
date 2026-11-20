@@ -1,13 +1,19 @@
-from platforms.youtube.parser import YoutubeParser
-from platforms.youtube.schemas import YoutubePost
-from platforms.youtube.scraper import YoutubeScraper
+from src.platforms.youtube.parser import YoutubeParser
+from src.platforms.youtube.schemas import YoutubePost
+from src.platforms.youtube.scraper import YoutubeScraper
 
 
 class YoutubeService:
-    def __init__(self) -> None:
-        self.scraper = YoutubeScraper()
-        self.parser = YoutubeParser()
+    PLATFORM = "youtube"
+
+    def __init__(
+            self,
+            scraper: YoutubeScraper,
+            parser: YoutubeParser
+    ) -> None:
+        self._scraper = scraper
+        self._parser = parser
 
     async def get_post_info(self, url: str) -> YoutubePost:
-        response = await self.scraper.get_post_info(url=url)
-        return self.parser.parse(response=response)
+        response = await self._scraper.get_post_info(url=url)
+        return self._parser.parse(response=response)
