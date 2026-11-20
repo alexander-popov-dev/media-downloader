@@ -2,7 +2,7 @@ from functools import cache
 
 from pydantic import Field
 
-from core.settings import BaseProjectSettings
+from src.core.settings import BaseProjectSettings
 
 
 class BackendSettings(BaseProjectSettings):
