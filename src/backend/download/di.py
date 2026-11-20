@@ -1,7 +1,7 @@
 from dishka import Provider, provide, Scope
 
-from backend.download.service import DownloadService
-from platforms.youtube.service import YoutubeService
+from src.backend.download.service import DownloadService
+from src.platforms.youtube.service import YoutubeService
 
 
 class DownloadProvider(Provider):

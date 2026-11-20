@@ -5,9 +5,9 @@ from dishka.integrations.fastapi import inject
 from fastapi import APIRouter
 from starlette import status
 
-from backend.download.schemas import DownloadResponse, DownloadRequest
-from backend.download.service import DownloadService
-from backend.settings import get_backend_settings
+from src.backend.download.schemas import DownloadResponse, DownloadRequest
+from src.backend.download.service import DownloadService
+from src.backend.settings import get_backend_settings
 
 router = APIRouter(prefix="/download", tags=["download"])
 

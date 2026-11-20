@@ -1,6 +1,6 @@
-from backend.download.exceptions import PlatformNotSupported
-from backend.download.schemas import DownloadRequest, DownloadResponse
-from platforms.youtube.service import YoutubeService
+from src.backend.download.exceptions import PlatformNotSupported
+from src.backend.download.schemas import DownloadRequest, DownloadResponse
+from src.platforms.youtube.service import YoutubeService
 
 
 class DownloadService:

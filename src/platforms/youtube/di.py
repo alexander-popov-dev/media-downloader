@@ -1,8 +1,8 @@
 from dishka import Provider, provide, Scope
 
-from platforms.youtube.parser import YoutubeParser
-from platforms.youtube.scraper import YoutubeScraper
-from platforms.youtube.service import YoutubeService
+from src.platforms.youtube.parser import YoutubeParser
+from src.platforms.youtube.scraper import YoutubeScraper
+from src.platforms.youtube.service import YoutubeService
 
 
 class YoutubeProvider(Provider):
