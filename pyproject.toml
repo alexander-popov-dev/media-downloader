@@ -1,0 +1,14 @@
+[project]
+name = "media-downloader"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dishka>=1.10.1",
+    "fastapi>=0.165.0",
+    "pydantic>=2.14.3",
+    "pydantic-settings>=2.16.2",
+    "uvicorn>=0.54.0",
+    "yt-dlp>=2026.10.26",
+]

@@ -28,6 +28,10 @@ class YoutubeScraper:
 
     @staticmethod
     async def get_post_info(url: str) -> dict:
-        with yt_dlp.YoutubeDL() as ydl:
+        params = {
+            "noplaylist": True,
+            "skip_download": True
+}
+        with yt_dlp.YoutubeDL(params) as ydl:
             result = await asyncio.to_thread(ydl.extract_info, url=url)
             return dict(result)
